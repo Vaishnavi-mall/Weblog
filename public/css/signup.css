@@ -1,0 +1,59 @@
+.signup-img {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.card {
+    background-color: #ffe9ef;
+}
+
+.top-left {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.top-left-logo {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.create-text {
+    color: #624a59;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text-center {
+    color: #624a59;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.button {
+    background-color: #624a59;
+    color: white;
+    padding-top: 5px;
+}
+
+.my-form-outline {
+    border: 1px solid #624a59;
+    border-radius: 5px;
+}
+
+.form-control {
+    background-color: #ffe9ef;
+}
+
+.a-logo {
+    text-decoration: none;
+    color: #ffe9ef;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #624a59;
+    font-size: 17px;
+}

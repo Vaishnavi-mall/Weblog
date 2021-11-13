@@ -1,0 +1,67 @@
+.login-img {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-left-logo {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.a-logo {
+    text-decoration: none;
+    color: #624a59;
+}
+
+.card {
+    background-color: #624a59;
+}
+
+.top-right {
+    position: absolute;
+    top: 170px;
+    right: 130px;
+}
+
+.top-left-logo {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-text {
+    color: #ffe9ef;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text-center {
+    color: #ffe9ef;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.button {
+    background-color: #ffe9ef;
+    color: #624a59;
+    padding-top: 5px;
+}
+
+.my-form-outline {
+    border: 1px solid #624a59;
+    border-radius: 5px;
+}
+
+.form-control {
+    background-color: #ffe9ef;
+}
+
+.a-register {
+    text-decoration: none;
+    color: #ffe9ef;
+    font-size: 17px;
+}
