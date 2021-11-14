@@ -22,50 +22,58 @@
         <h3 class="create-text text-uppercase text-center mb-3">
           Create an account
         </h3>
-        <form>
+        <form action="/auth/register" method="POST" >
           <div class="my-form-outline mb-3">
             <input
               type="text"
-              id="form3Example1cg"
+              id="name"
+              name="name"
               class="form-control form-control-lg"
               placeholder="Your name"
+               Required
             />
           </div>
 
           <div class="my-form-outline mb-3">
             <input
               type="email"
-              id="form3Example3cg"
+              id="email"
+              name="email"
               class="form-control form-control-lg"
               placeholder="Your email"
+               Required
             />
           </div>
 
           <div class="my-form-outline mb-3">
             <input
               type="password"
-              id="form3Example4cg"
+              id="password"
+              name="password"
               class="form-control form-control-lg"
               placeholder="Your password"
+               Required
             />
           </div>
 
           <div class="my-form-outline mb-4">
             <input
               type="password"
-              id="form3Example4cdg"
+              id="confirm-password"
+              name="confirmPassword"
               class="form-control form-control-lg"
               placeholder="Confirm password"
+               Required
             />
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="button" class="button btn btn-lg">Register</button>
+            <button type="submit" class="button btn btn-lg">Register</button>
           </div>
 
           <p class="text-center text-muted mt-3 mb-0">
             Already have an account?
-            <a href="#!" class="fw-bold text-body"><a class="a-login">Login Here</a></a>
+            <a href="#!" class="fw-bold text-body"><a class="a-login">Login Here</a>
           </p>
         </form>
       </div>

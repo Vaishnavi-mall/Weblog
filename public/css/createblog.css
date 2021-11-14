@@ -1,0 +1,32 @@
+.a-logo {
+    text-decoration: none;
+    color: #624a59;
+}
+
+.top-left {
+    color: #624a59;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.top-center {
+    color: #624a59;
+    position: absolute;
+    top: 8px;
+    left: 520px;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.blog-card {
+    background-color: #624a59;
+    color: #ffe9ef;
+    position: absolute;
+    top: 138px;
+    left: 396px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

@@ -1,24 +1,38 @@
 //Imports
 const express = require('express')
 const app = express()
+
+//Database Connection
+const mysql = require('mysql')
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'Vaishnavi@19',
+    password: 'Vaishnavi@19',
+    database: 'weblog',
+    port: '3306'
+})
+db.connect((error) => {
+    if (!error) {
+        console.log("Connnection Established")
+    } else {
+        console.log("Connection failed")
+    }
+})
+
+
+//Static files
+app.use('/', require('./static/staticExport'))
+    //Routes  
+app.use('/', require('./routes/pages'));
+app.use('/auth', require('./routes/auth'));
+app.use('/blog', require('./routes/blog'));
+
+//Parse URL-encoded bosies as sent by HTNL forms
+app.use(express.urlencoded({ extended: false }));
+//Parse JSOn bodies as sent by API clients
+app.use(express.json());
+
+
+//Listen on port
 const port = 3000
-
-
-//Static files 
-app.use(express.static('public'))
-app.use('/css', express.static(__dirname + 'puclic/css'))
-app.use('/js', express.static(__dirname + 'puclic/js'))
-app.use('/img', express.static(__dirname + 'puclic/img'))
-
-//Routes
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html')
-})
-app.get('/signup', (req, res) => {
-    res.sendFile(__dirname + '/views/signup.html')
-})
-app.get('/login', (req, res) => {
-        res.sendFile(__dirname + '/views/login.html')
-    })
-    //Listen on port
 app.listen(port, () => console.info(`Listening on port ${port}`))

@@ -25,6 +25,12 @@ a {
     font-size: 17px;
 }
 
+.a-create {
+    text-decoration: none;
+    color: #624a59;
+    font-size: 17px;
+}
+
 .button {
     transition-duration: 0.4s;
     background-color: #624a59;
