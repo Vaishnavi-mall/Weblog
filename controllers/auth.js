@@ -24,10 +24,9 @@ exports.register = (req, res) => {
             console.log(error)
         }
         if (results.length > 0) {
-            return res.render(('signup'), {
+            return res.render(('signup.ejs'), {
                 message: "A user with this email already exists"
             })
-            console.log("Aa")
         } else if (password != confirmPassword) {
             return res.render(('signup'), {
                 message: "Password and Confirm Password do not match"
@@ -37,9 +36,7 @@ exports.register = (req, res) => {
                 if (error) {
                     console.log(error)
                 } else {
-                    const path = require('path');
-                    const dirPath = path.join(__dirname, '../views/index.html');
-                    res.sendFile(dirPath);
+                    res.render('index.ejs');
                 }
             })
         }
@@ -54,15 +51,11 @@ exports.login = (req, res) => {
             console.log(error)
         }
         if (results.length > 0) {
-            const path = require('path');
-            const dirPath = path.join(__dirname, '../views/index.html');
-            res.sendFile(dirPath);
+            res.render('index.ejs');
 
 
         } else {
-            const path = require('path');
-            const dirPath = path.join(__dirname, '../views/login.html');
-            res.sendFile(dirPath);
+            res.render('login.ejs');
         }
 
     })

@@ -7,6 +7,7 @@ router.use(express.urlencoded({ extended: false }));
 router.use(express.json());
 
 router.post('/create', blogController.create)
-router.post('/list', blogController.list)
+router.get('/list', blogController.list)
+router.get('/detail/:id', blogController.detail)
 
 module.exports = router;

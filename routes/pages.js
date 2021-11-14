@@ -1,27 +1,30 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
+var bodyParser = require('body-parser');
+var app = express();
+
+app.set('view engine', 'ejs');
 
 router.get('/', (req, res) => {
-    console.log(req.user.name)
-    const dirPath = path.join(__dirname, '../views/index.html');
-    res.sendFile(dirPath);
+    res.render('index.ejs');
 })
 
 router.get('/signup', (req, res) => {
-    const dirPath = path.join(__dirname, '../views/signup.html');
-    res.sendFile(dirPath);
+    res.render('signup.ejs');
+
 })
 
 
 router.get('/login', (req, res) => {
-    const dirPath = path.join(__dirname, '../views/login.html');
-    res.sendFile(dirPath);
+    res.render('login.ejs');
 })
 
 router.get('/createblog', (req, res) => {
-    const dirPath = path.join(__dirname, '../views/createblog.html');
-    res.sendFile(dirPath);
+    res.render('createblog.ejs');
+})
+router.get('/blogs', (req, res) => {
+    res.render('blogs.ejs');
 })
 
 module.exports = router;

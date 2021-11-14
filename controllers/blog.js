@@ -18,14 +18,12 @@ db.connect((error) => {
     }
 })
 exports.create = (req, res) => {
-    const { title, shortdescription, content, category } = req.body;
-    db.query('INSERT into blog SET ?', { title: title, shortdescription: shortdescription, content: content, category: category }, (error, results) => {
+    const { title, shortdescription, content, category, image } = req.body;
+    db.query('INSERT into blog SET ?', { title: title, shortdescription: shortdescription, content: content, category: category, image: image }, (error, results) => {
         if (error) {
             console.log(error)
         } else {
-            const path = require('path');
-            const dirPath = path.join(__dirname, '../views/index.html');
-            res.sendFile(dirPath);
+            res.render('index.ejs');
         }
     })
 }
@@ -38,13 +36,28 @@ exports.list = (req, res) => {
             console.log(error)
         }
         if (results.length > 0) {
-            const path = require('path');
-            const dirPath = path.join(__dirname, '../views/index.html');
-            res.sendFile(dirPath);
+            res.render('blogs.ejs', { blogs: results });
+
         } else {
-            const path = require('path');
-            const dirPath = path.join(__dirname, '../views/index.html');
-            res.sendFile(dirPath);
+            res.render('index.ejs');
+        }
+
+    })
+}
+
+exports.detail = (req, res) => {
+    console.log("Hello")
+    const id = req.params.id;
+    db.query('SELECT * FROM blog WHERE id=?', [id], (error, results, fields) => {
+        console.log("Hello")
+        if (error) {
+            console.log(error)
+        }
+        if (results.length > 0) {
+            res.render('blog.ejs', { blogs: results });
+
+        } else {
+            res.render('index.ejs');
         }
 
     })
